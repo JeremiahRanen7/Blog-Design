@@ -1,0 +1,41 @@
+:root {
+  --bulma-body-background-color: white !important;
+  --bulma-link-text-active: black !important;
+}
+
+body {
+  background-color: var(--bulma-body-background-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-paddingless-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid * {
+  grid-column: md;
+}
+.grid-xl {
+  grid-column: xl;
+}
+
+.border-full {
+  border-radius: 100%;
+}
+
+@media (max-width: 672px) {
+  :root {
+    font-size: 90%;
+  }
+}
